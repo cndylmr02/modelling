@@ -6,3 +6,4 @@ Sastrawi
 scikit-learn
 matplotlib
 seaborn
+openpyxl
