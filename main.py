@@ -29,14 +29,14 @@ load_data, preprocessing, feature_extraction, clasification = st.tabs(
 
 
 with load_data:
-    uploaded_file = st.file_uploader('Upload file CSV')
+    uploaded_file = st.file_uploader('Upload file Excel')
     if uploaded_file is not None:
-        # df = pd.read_csv("https://raw.githubusercontent.com/syayidalaziz10/cobu/main/data/ptaa.csv")
+        # df = pd.read_excel("PreprocessingData.xlsx")
         df = pd.read_csv(uploaded_file)
         st.header('Dataset')
         st.dataframe(df)
     else:
-        st.warning('Mohon upload file CSV terlebih dahulu.')
+        st.warning('Mohon upload file Excel terlebih dahulu.')
 
 
 with preprocessing:
@@ -55,7 +55,7 @@ with preprocessing:
         
         def process_stopword(tokens):
             stop_words = set(stopwords.words('indonesian'))
-            custom_stop_words = ['masingmasing','tiaptiap','satusatunya', 'intinya', 'seiring']
+            custom_stop_words = ['00','000','zimmerman', 'ab', 'abk']
             stop_words.update(custom_stop_words)
             filtered_tokens = [token for token in tokens if token.lower() not in stop_words]
             return filtered_tokens
