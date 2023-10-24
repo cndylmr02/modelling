@@ -79,7 +79,7 @@ with preprocessing:
         st.write('4. Steeming:', steeming_abstrak)
 
     else:
-        st.warning('Mohon upload file CSV terlebih dahulu.')
+        st.warning('Mohon upload file Excel terlebih dahulu.')
 
 with feature_extraction:
     if 'df' in locals():
@@ -187,7 +187,7 @@ with feature_extraction:
 
 
     else:
-        st.warning('Mohon upload file CSV terlebih dahulu.')
+        st.warning('Mohon upload file Excel terlebih dahulu.')
 
 with clasification:
     if 'df' in locals():
