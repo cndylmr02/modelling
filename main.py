@@ -32,7 +32,7 @@ with load_data:
     uploaded_file = st.file_uploader('Upload file Excel')
     if uploaded_file is not None:
         # df = pd.read_excel("PreprocessingData.xlsx")
-        df = pd.read_csv(uploaded_file)
+        df = pd.read_excel(uploaded_file)
         st.header('Dataset')
         st.dataframe(df)
     else:
